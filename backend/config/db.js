@@ -6,7 +6,7 @@ const connectDB = async () => {
     console.log("✅ MongoDB Connected");
   } catch (error) {
     console.error("❌ MongoDB connection failed:", error.message);
-    process.exit(1);
+    console.log("⚠️ Continuing server execution with local JSON database fallback...");
   }
 };
 

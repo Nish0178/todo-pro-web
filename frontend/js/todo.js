@@ -13,9 +13,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const pendingTasksEl = document.getElementById("pendingTasks");
   const productivityEl = document.getElementById("productivityScore");
 
+  const userId = localStorage.getItem("userId");
+
   // ❗ SAFETY CHECK (THIS WAS MISSING)
   if (!addBtn || !taskInput || !taskList) {
     console.error("Dashboard DOM not loaded properly");
+    return;
+  }
+
+  if (!userId) {
+    alert("Please log in to access your dashboard");
+    window.location.href = "login.html";
     return;
   }
 
@@ -24,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // ================= LOAD TASKS =================
   async function loadTasks() {
     try {
-      const res = await fetch(API_URL);
+      const res = await fetch(`${API_URL}?userId=${userId}`);
       const data = await res.json();
 
       if (!Array.isArray(data)) {
@@ -61,7 +69,8 @@ document.addEventListener("DOMContentLoaded", () => {
         body: JSON.stringify({
           text,
           dueDate: taskDate.value || null,
-          priority: taskPriority.value || "Medium"
+          priority: taskPriority.value || "Medium",
+          userId: userId
         })
       });
 
@@ -141,8 +150,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const high = Array(7).fill(0);
 
     tasks.forEach(t => {
-      if (!t.dueDate) return;
-      const d = new Date(t.dueDate).getDay();
+      const dateVal = t.dueDate || t.createdAt || new Date();
+      const d = new Date(dateVal).getDay();
       if (t.priority === "Low") low[d]++;
       else if (t.priority === "Medium") med[d]++;
       else high[d]++;
@@ -167,8 +176,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const done = Array(7).fill(0);
 
     tasks.forEach(t => {
-      if (!t.dueDate) return;
-      const d = new Date(t.dueDate).getDay();
+      const dateVal = t.dueDate || t.createdAt || new Date();
+      const d = new Date(dateVal).getDay();
       total[d]++;
       if (t.completed) done[d]++;
     });
@@ -199,6 +208,8 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   document.getElementById("logoutBtn").onclick = () => {
+    localStorage.removeItem("userId");
+    localStorage.removeItem("userName");
     window.location.href = "login.html";
   };
 
