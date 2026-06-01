@@ -76,7 +76,6 @@ todo-pro-web/
 
 ### 📂 How to Run Locally
 
-bash
 # Clone repository
 git clone https://github.com/Nish0178/todo-pro-web.git
 
@@ -87,6 +86,7 @@ npm start
 
 # Frontend
 Open frontend/index.html in browser
+
 ---
 🧠 What I Learned
 Full-stack web application architecture
@@ -101,7 +101,7 @@ Full project deployment using Render & MongoDB Atlas
 ### 👨‍💻 Author
 
 **Nishant Trivedi**
-💼 Aspiring Full-Stack Developer
+💼 Full-Stack Developer
 🌱 Passionate about building scalable web applications
 
 ---
