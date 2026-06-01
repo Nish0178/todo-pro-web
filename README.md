@@ -76,7 +76,7 @@ todo-pro-web/
 
 ### 📂 How to Run Locally
 
-```bash
+bash
 # Clone repository
 git clone https://github.com/Nish0178/todo-pro-web.git
 
