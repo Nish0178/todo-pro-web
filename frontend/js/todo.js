@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  const API_URL = "http://localhost:5000/api/todos";
+  const API_URL = "https://todo-pro-web-backend.onrender.com/api";
 
   const taskInput = document.getElementById("taskInput");
   const taskDate = document.getElementById("taskDate");
