@@ -89,6 +89,7 @@ Open frontend/index.html in browser
 
 ---
 🧠 What I Learned
+
 Full-stack web application architecture
 REST API development using Express.js
 JWT Authentication & protected routes
@@ -96,6 +97,7 @@ MongoDB integration with Mongoose
 Data visualization with Chart.js
 Debugging frontend ↔ backend integration
 Full project deployment using Render & MongoDB Atlas
+
 ---
 
 ### 👨‍💻 Author
