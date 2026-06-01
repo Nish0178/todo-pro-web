@@ -1,7 +1,8 @@
 ## 🚀 TodoPro – Smart Task Management Web App
 
-TodoPro is a **full-stack task management web application** designed to help users plan, track, and complete their daily tasks efficiently.
-Built with a modern tech stack, it offers a clean UI, real-time analytics, and secure authentication for a smooth productivity experience.
+TodoPro is a **full-stack task management web application** built to help users organize, track, and complete daily tasks efficiently.
+
+It features secure authentication, real-time analytics, task prioritization, productivity tracking, and export functionality — all wrapped in a clean responsive UI.
 
 ---
 
@@ -40,16 +41,27 @@ Built with a modern tech stack, it offers a clean UI, real-time analytics, and s
 
 ---
 
-### 🌍 Live Demo
-
-🔗 **Frontend:**
-[https://Nish0178.github.io/todopro/](https://yourusername.github.io/todopro/)
-
-🔗 **Backend API:**
-[https://your-backend.onrender.com/api/todos](https://your-backend.onrender.com/api/todos)
-
+### 🌐 Live Demo
+🔗 Frontend (Live Website)
+https://todo-pro-web-frontend.onrender.com
+🔗 Backend API
+https://todo-pro-web-backend.onrender.com
 ---
-
+📂 Project Structure
+todo-pro-web/
+│
+├── frontend/
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+│
+├── backend/
+│   ├── server.js
+│   ├── package.json
+│   └── models/
+│
+└── README.md
+---
 ### 🧠 What I Learned
 
 * Full-stack application architecture
@@ -58,14 +70,13 @@ Built with a modern tech stack, it offers a clean UI, real-time analytics, and s
 * Data visualization using Chart.js
 * Debugging real-world frontend ↔ backend issues
 * Deployment & environment configuration
-
 ---
 
 ### 📂 How to Run Locally
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/todopro.git
+git clone https://github.com/Nish0178/todo-pro-web.git
 
 # Backend
 cd backend
@@ -74,8 +85,15 @@ npm start
 
 # Frontend
 Open frontend/index.html in browser
-```
-
+---
+🧠 What I Learned
+Full-stack web application architecture
+REST API development using Express.js
+JWT Authentication & protected routes
+MongoDB integration with Mongoose
+Data visualization with Chart.js
+Debugging frontend ↔ backend integration
+Full project deployment using Render & MongoDB Atlas
 ---
 
 ### 👨‍💻 Author
