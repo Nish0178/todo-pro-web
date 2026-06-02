@@ -464,3 +464,10 @@ button:hover {
     flex-wrap: wrap;
   }
 }
+@media screen and (max-width: 1024px){
+
+  .stats{
+    grid-template-columns: repeat(2,1fr);
+  }
+
+}
