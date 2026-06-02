@@ -1397,3 +1397,74 @@ body {
 .auth-page .footer {
   margin-top: auto;
 }
+/* ================= HOME PAGE MOBILE FIX ================= */
+
+@media screen and (max-width: 768px){
+
+  .dashboard-header{
+    flex-direction: column;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .brand{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .brand img{
+    height: 55px;
+  }
+
+  .brand h2{
+    font-size: 2rem;
+  }
+
+  .nav-links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .nav-links a{
+    margin: 0;
+  }
+
+  /* Hero Section */
+  .hero{
+    padding: 20px;
+  }
+
+  .hero h1{
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+
+  .hero p{
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* Developer Section */
+  .developer-card{
+    flex-direction: column-reverse;
+    margin: 30px 15px;
+    padding: 25px;
+    text-align: center;
+  }
+
+  .developer-image img{
+    max-width: 220px;
+    width: 100%;
+  }
+
+  .developer-text h2{
+    font-size: 1.8rem;
+  }
+
+  /* Footer */
+  .footer{
+    position: relative;
+  }
+}
