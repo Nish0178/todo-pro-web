@@ -396,3 +396,71 @@ button:hover {
 .footer a:hover {
   text-decoration: underline;
 }
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media screen and (max-width: 768px) {
+
+  /* Header */
+  .dashboard-header{
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .dev-logo img{
+    height: 60px;
+  }
+
+  /* Stats Cards */
+  .stats{
+    grid-template-columns: 1fr;
+    padding: 0 15px;
+  }
+
+  /* Charts */
+  .chart-section{
+    width: 100%;
+    padding: 15px;
+  }
+
+  canvas{
+    max-width: 100%;
+  }
+
+  /* Task Area */
+  .tasks{
+    margin: 15px;
+    padding: 15px;
+  }
+
+  .task-input{
+    flex-direction: column;
+  }
+
+  .task-input input,
+  .task-input select,
+  .task-input button{
+    width: 100%;
+  }
+
+  /* Export Buttons */
+  .export-buttons{
+    flex-direction: column;
+  }
+
+  .export-buttons button{
+    width: 100%;
+  }
+
+  /* Task Items */
+  #taskList li{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .task-right{
+    flex-wrap: wrap;
+  }
+}
